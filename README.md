@@ -7,13 +7,13 @@
 - [3) Repository Structure](#3-repository-structure)
 
 ## 1) Introduction:
-This project implements an end-to-end data pipeline on Microsoft Azure to ingest, process, and visualize COVID-19 data alongside population statistics. By combining case data from the European Centre for Disease Prevention and Control (ECDC) with population figures, the pipeline enables meaningful analysis of infection trends relative to demographic context, culminating in interactive dashboards for stakeholders. 
+This project implements an end-to-end data pipeline on Microsoft Azure to ingest, process and visualize COVID-19 data alongside population statistics. By combining case data from the European Centre for Disease Prevention and Control (ECDC) with population figures, the pipeline enables meaningful analysis of infection trends relative to demographic context, culminating in interactive dashboards for stakeholders. 
 
 The repository contains resource exported from Azure Data Factory. 
 
 ## 2) Project Structure:
 
-The pipeline follows a modern data engineering pattern — Ingest → Store → Transform → Warehouse → Publish — built on Azure's native data services. Data is first ingested from two sources: the ECDC COVID-19 dataset via an HTTP connector, and population data stored in Azure Blob Storage, both orchestrated through Azure Data Factory and staged in Azure Data Lake Gen2 for scalable raw storage. The data then undergoes transformation using Azure Data Factory pipelines and Azure Databricks, which handle cleansing, joining, and enrichment tasks such as calculating infection rates relative to population. The transformed output is loaded into an Azure SQL Database, serving as a structured data warehouse optimized for querying and reporting. Finally, the modeled data is published and connected to Power BI, enabling interactive dashboards that allow stakeholders to explore COVID-19 trends, case rates, and demographic insights.
+The pipeline follows a modern data engineering pattern — Ingest → Store → Transform → Warehouse → Publish — built on Azure's native data services. Data is first ingested from two sources: the ECDC COVID-19 dataset via an HTTP connector and population data stored in Azure Blob Storage, both orchestrated through Azure Data Factory and staged in Azure Data Lake Gen2 for scalable raw storage. The data then undergoes transformation using Azure Data Factory pipelines and Azure Databricks, which handle cleansing, joining and enrichment tasks such as calculating infection rates relative to population. The transformed output is loaded into an Azure SQL Database, serving as a structured data warehouse optimized for querying and reporting. Finally, the modeled data is published and connected to Power BI, enabling interactive dashboards that allow stakeholders to explore COVID-19 trends, case rates and demographic insights.
 
 ## 3) Repository Structure:
 
