@@ -61,7 +61,7 @@ The pipeline follows a modern data engineering pattern Ingest → Store → Tran
 │   ├── pl_process_population.json                # trigger databrick compute to process population dataset.
 │   └── pl_process_testing.json                   # process testing dataset.
 └── trigger/                                      # all trigger pipeline.
-    ├── tr_event_blobCreated.json                 # trigger execute population pipeline when uploading new files.               
+    ├── tr_event_blobCreated.json                 # trigger execute population pipeline when uploading new files.           
     ├── tr_ingest_ecdc.json                 
     ├── tr_load_casesDeaths.json                 
     ├── tr_load_hospitalAdmissions.json     
